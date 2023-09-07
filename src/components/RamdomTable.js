@@ -13,7 +13,7 @@ function generateRandomData(rows, columns) {
 }
 
 function RandomDataTable() {
-    const rows = 5;
+    const rows = 50;
     const columns = 5;
     const data = generateRandomData(rows, columns);
 

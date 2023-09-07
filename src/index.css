@@ -49,15 +49,61 @@ header nav a.active {
 
 /* page content */
 main {
+  display: flex;
   max-width: 1200px;
-  height: auto;
-  margin: 40px 10px;
+  justify-content: center;
+  /* width: 100vw; */
+  margin: 0px 10px;
+  /* outline: auto; */
+  position: relative;
 }
 
 /* help layout */
-
+.help-layout nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+.help-layout nav a{
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.help-layout nav a:hover{
+  border-color: var(--primary);
+}
+.help-layout nav a.active {
+  background: var(--primary);
+}
 
 /* faq */
+.faq .question {
+  background: rgba(0,0,0,0.2);
+  padding: 5px 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+/* contact form */
+form {
+  margin-top: 30px;
+}
+form input, form label span, form textarea {
+  display: block;
+}
+form input, form textarea {
+  margin-bottom: 30px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 0;
+  width: 300px;
+  color: var(--secondary);
+}
+form label span {
+  margin-bottom: 10px;
+}
 
 
 /* careers list */
@@ -69,72 +115,95 @@ main {
 /* breadcrumbs */
 
 /* home-layout */
-.root-layout{
+.root-layout {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  width: 100%;
+  /* outline: auto; */
+  gap: 0rem;
   position: relative;
-  margin-top: 50px;
-  /* background-color: teal; */
+  margin-top: 40px; /*Adjusted margin-top to match the header height*/
 }
 
-.root-header{
+.root-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #38436a; /* You can set the background color as needed */
-  z-index: 100; /* Set a z-index to ensure it appears above other content */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
-  padding: 10px 20px; /* Optional: Add padding to the header */
+  background-color: #38436a;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
   box-sizing: border-box;
 }
 
-.home-layout{
+.home-layout {
   display: flex;
-  height: 100vh;
+  justify-content: center;
+  min-width: 80vw;
+  height: 100%;
   flex-wrap: nowrap;
-  /* background-color: teal; */
 }
 
-.home-layout img{
+.home-layout img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  object-position: 0% 40%; /* 50% from the left, 20% from the top */
+  object-position: 0% 40%;
 }
 
-.sidebar{
+.sidebar {
   width: 250px;
   height: 500px;
-  outline: 1px solid #38436a;
+  /* outline: 1px solid #38436a; */
   margin-right: 20px;
-  padding: 1.2rem  0rem;
+  padding: 1.2rem 0rem;
   position: sticky;
-  top: 65px; 
-  flex-shrink: 0; 
+  top: 60px; /* Adjusted top value to match the header height */
+  flex-shrink: 0;
 }
 
-.sidebar ul{
+.sidebar ul {
   list-style: none;
-  /* padding: 0;
-  margin: 0; */
 }
-.sidebar-ul a{
+
+.sidebar-ul a {
   text-decoration: none;
 }
 
-.my-table{
+.sidebar-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #38436a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0px
+}
+
+.my-table {
   width: 100%;
   text-align: center;
   outline: #38436a 1px solid;
 }
 
-.my-table thead{
+.my-table thead {
   background-color: #6073b6;
   color: white;
 }
 
-.my-table tr:nth-child(even){
+.my-table tr:nth-child(even) {
   background-color: #38436a;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  /* outline: auto; */
 }

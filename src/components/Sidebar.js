@@ -9,8 +9,9 @@ const Sidebar = () => {
                     <Link to="about">About</Link>
                 </li>
                 <li>
-                    <a href="https://www.as.com">as.com</a>
-                    </li>
+                    <Link to="help">Help</Link>
+                </li>
+            <button className="sidebar-button">Click me</button>
             </ul>
         </>
 
