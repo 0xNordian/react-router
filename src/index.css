@@ -50,7 +50,8 @@ header nav a.active {
 /* page content */
 main {
   max-width: 1200px;
-  margin: 40px auto;
+  height: auto;
+  margin: 40px 10px;
 }
 
 /* help layout */
@@ -66,3 +67,74 @@ main {
 
 
 /* breadcrumbs */
+
+/* home-layout */
+.root-layout{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  margin-top: 50px;
+  /* background-color: teal; */
+}
+
+.root-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #38436a; /* You can set the background color as needed */
+  z-index: 100; /* Set a z-index to ensure it appears above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+  padding: 10px 20px; /* Optional: Add padding to the header */
+  box-sizing: border-box;
+}
+
+.home-layout{
+  display: flex;
+  height: 100vh;
+  flex-wrap: nowrap;
+  /* background-color: teal; */
+}
+
+.home-layout img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: 0% 40%; /* 50% from the left, 20% from the top */
+}
+
+.sidebar{
+  width: 250px;
+  height: 500px;
+  outline: 1px solid #38436a;
+  margin-right: 20px;
+  padding: 1.2rem  0rem;
+  position: sticky;
+  top: 65px; 
+  flex-shrink: 0; 
+}
+
+.sidebar ul{
+  list-style: none;
+  /* padding: 0;
+  margin: 0; */
+}
+.sidebar-ul a{
+  text-decoration: none;
+}
+
+.my-table{
+  width: 100%;
+  text-align: center;
+  outline: #38436a 1px solid;
+}
+
+.my-table thead{
+  background-color: #6073b6;
+  color: white;
+}
+
+.my-table tr:nth-child(even){
+  background-color: #38436a;
+}

@@ -1,23 +1,23 @@
 import {
   createBrowserRouter,
-  Routes,
   Route,
-  Link,
-  NavLink,
   createRoutesFromElements,
   RouterProvider
 } from 'react-router-dom'
 
 //?Pages
-
 import Home from './pages/Home'
 import About from './pages/About'
 import RootLayout from './layouts/RootLayout'
+import HomeLayout from './layouts/HomeLayout'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout/>}>
-      <Route index element={<Home />} />
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={
+        <HomeLayout>
+          <Home />
+        </HomeLayout>} />
       <Route path="about" element={<About />} />
     </Route>
   )
@@ -25,7 +25,7 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
   );
 }
 
