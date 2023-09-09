@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLoaderData, useParams } from 'react-router-dom'
+import { useLoaderData, useParams, Link } from 'react-router-dom'
 import CareerDetailsError from './CareerDetailsError';
 
 const CareerDetails = () => {
@@ -14,12 +14,13 @@ const CareerDetails = () => {
 
     return (
         <div className="career-details">
-            <h2>Career Details for {data.title}</h2>
+            <h2>{data.title}</h2>
             <p>Starting salary: {data.salary}</p>
             <p>Location: {data.location}</p>
             <div className="details">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed sunt ipsam quam assumenda quasi ipsa facilis laborum rerum voluptatem!</p>
             </div>
+            <span><Link to="/careers">⬅️</Link></span>
         </div>
     )
 }
