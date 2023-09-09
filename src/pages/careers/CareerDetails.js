@@ -1,14 +1,12 @@
 import React from 'react'
-import { useLoaderData, useParams, Link } from 'react-router-dom'
+import { useLoaderData, Link } from 'react-router-dom'
 import CareerDetailsError from './CareerDetailsError';
 
 const CareerDetails = () => {
-    // const { id } = useParams();
     const {data, error} = useLoaderData();
     console.log("data", data)
 
     if (error) {
-        // Handle the case where the data is not available (e.g., loading or error)
         return <CareerDetailsError />;
     }
 
@@ -18,7 +16,7 @@ const CareerDetails = () => {
             <p>Starting salary: {data.salary}</p>
             <p>Location: {data.location}</p>
             <div className="details">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed sunt ipsam quam assumenda quasi ipsa facilis laborum rerum voluptatem!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing!</p>
             </div>
             <span><Link to="/careers">⬅️</Link></span>
         </div>
@@ -27,7 +25,8 @@ const CareerDetails = () => {
 
 export default CareerDetails
 
-export const careerDetailsLoader = async ({ params, navigate }) => {
+export const careerDetailsLoader = async ({ params }) => {
+    console.log("params", params)
     const { id } = params;
     try {
         const res = await fetch(`http://localhost:4000/careers/${id}`);

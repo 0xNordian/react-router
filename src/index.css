@@ -307,3 +307,8 @@ form label span {
   text-decoration: none;
   font-size: 1.2rem;
 }
+
+.salary{
+  font-size: .7rem;
+  color: #bbb;
+}
