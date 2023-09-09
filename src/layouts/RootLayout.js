@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 
 const RootLayout = () => {
     const location = useLocation();
-    const pathsToRenderSidebar = ['/', '/help']; // Add more paths as needed
+    const pathsToRenderSidebar = ['/']; // Add more paths as needed
 
     // Check if the current location pathname is in the pathsToRenderSidebar array
     const shouldRenderSidebar = pathsToRenderSidebar.includes(location.pathname);
