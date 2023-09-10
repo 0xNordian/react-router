@@ -327,3 +327,9 @@ form label span {
   color: #6073b6;
 
 }
+
+.crumb::before {
+  content: ">";
+  margin: 0 0.5rem;
+  color: #bbb;
+}
