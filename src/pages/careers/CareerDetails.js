@@ -13,7 +13,7 @@ const CareerDetails = () => {
     return (
         <div className="career-details">
             <h2>{data.title}</h2>
-            <p>Starting salary: {data.salary}</p>
+            <p>Starting salary: USD${data.salary.toLocaleString()}</p>
             <p>Location: {data.location}</p>
             <div className="details">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing!</p>
@@ -26,17 +26,12 @@ const CareerDetails = () => {
 export default CareerDetails
 
 export const careerDetailsLoader = async ({ params }) => {
-    console.log("params", params)
+    // console.log("params", params)
     const { id } = params;
-    try {
         const res = await fetch(`http://localhost:4000/careers/${id}`);
         if (!res.ok) {
-            throw new Error('Network response was not ok');
+            throw Error('Network response was not ok');
         }
         const data = await res.json();
         return { data, error: null };
-    } catch (error) {
-        console.error("Error fetching data:", error);
-        return { data: null, error };
-    }
 }
