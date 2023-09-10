@@ -6,7 +6,7 @@ const CareerDetailsError = (props) => {
     // console.log("error", error)
     return (
         <div className="career-details-error">
-            <h2>Oops! Career details couldn't be loaded.</h2>
+            <h2>Oops! This page couldn't be loaded.</h2>
             <p>Error message: {error.message}</p>
             <p>Please check the URL or try again later.</p>
             <Link to="/careers">Back to Careers</Link>

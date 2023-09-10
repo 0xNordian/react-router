@@ -63,6 +63,7 @@ main {
   margin: 0px 10px;
   /* outline: auto; */
   position: relative;
+  padding: 3rem 0rem;
 }
 
 /* help layout */
@@ -174,7 +175,7 @@ form label span {
   height: 500px;
   /* outline: 1px solid #38436a; */
   margin-right: 20px;
-  padding: 1.2rem 0rem;
+  padding: 3rem 0rem;
   position: sticky;
   top: 60px;
   /* Adjusted top value to match the header height */
