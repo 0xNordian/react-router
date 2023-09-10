@@ -313,3 +313,17 @@ form label span {
   font-size: .7rem;
   color: #bbb;
 }
+
+.breadcrumb {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.breadcrumb > a {
+  text-decoration: none;
+}
+
+.breadcrumb>a:hover{
+  color: #6073b6;
+
+}
