@@ -317,6 +317,7 @@ form label span {
 .breadcrumb {
   margin-top: 0.5rem;
   font-size: 0.8rem;
+  margin-top: .5rem;
 }
 
 .breadcrumb > a {
@@ -325,7 +326,7 @@ form label span {
 
 .breadcrumb>a:hover{
   color: #6073b6;
-
+  
 }
 
 .crumb::before {
