@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { UseLocalStorage } from "../../hooks/UseLocalStorage";
 
 
@@ -17,7 +17,7 @@ export default function Contact() {
         };
 
         // Add the object to the 'arr' array
-        setArr([...arr, formData]);
+        setArr((prev) => [...prev, formData]);
 
         // Clear the localStorage items
         localStorage.removeItem("email");
@@ -29,6 +29,10 @@ export default function Contact() {
 
         // Handle the form submission logic here or simply update the 'arr' state
     };
+
+    useEffect(() => {
+        console.log("arr", arr);
+    }, [arr]);
 
     return (
         <div className="contact">
@@ -49,6 +53,7 @@ export default function Contact() {
                     <textarea
                         onChange={(e) => setMessage(e.target.value)}
                         value={message}
+                        type="message"
                         name="message"
                         required
                     ></textarea>
